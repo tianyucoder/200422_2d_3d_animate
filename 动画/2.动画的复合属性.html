@@ -8,9 +8,49 @@
 					animation: 动画名称  时间  方式  延时   动画次数 动画方向
 					animation: donghua   3s  linear  0.5s infinite reverse;
 			 */
+			 #demo{
+				width: 300px;
+				height: 40px;
+				background-color: skyblue;
+				margin: 300px auto;
+				animation:xuanzhuan 3s linear 0.5s infinite normal;
+				/* animation-name:xuanzhuan;
+				animation-duration: 3s;
+				animation-timing-function:linear;
+				animation-iteration-count:infinite;
+				animation-delay:3s; 
+				animation-direction:alternate; */
+			}
+			#demo:hover{
+				animation-play-state:paused
+			}
+			@keyframes xuanzhuan{
+				/* from{
+					transform: rotate(0deg);
+				}
+				to{
+					transform: rotate(360deg);
+				} */
+				0%{
+					transform: rotate(0deg);
+				}
+				25%{
+					background-color: red;
+				}
+				50%{
+					opacity: 0.6;
+				}
+				75%{
+					border-radius: 10px;
+					opacity: 0.4;
+				}
+				100%{
+					transform: rotate(360deg);
+				}
+			}
 		</style>
 	</head>
 	<body>
-		<div class="box">动画</div>
+		<div id="demo">动画</div>
 	</body>
 </html>

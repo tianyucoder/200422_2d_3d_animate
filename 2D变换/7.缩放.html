@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>缩放</title>
+	<title>缩放</title>
+	<style>
+		#demo{
+			width: 252px;
+			height: 300px;
+			margin: 200px auto;
+			border: 1px solid black;
+			overflow: hidden;
+		}
+		img{
+			transition: 1s all linear;
+		}
+		#demo:hover img{
+			transform: scale(1.2);
+		}
+	</style>
 </head>
 <body>
-
+	<div id="demo">
+		<img src="../imgs/huge.jpg" alt="">
+	</div>
 </body>
 </html>

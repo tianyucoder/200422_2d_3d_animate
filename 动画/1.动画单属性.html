@@ -13,23 +13,61 @@
 							ease	慢-快-慢
 							ease-in	慢开始
 							ease-out 慢结束
-					3.animation-play-state: running;---动画播放的状态
+					4.animation-play-state: running;---动画播放的状态
 							running：播放（默认值）
 							paused：暂停
-					4.animation-iteration-count: 1;-----动画次数
+					5.animation-iteration-count: 1;-----动画次数
 							默认 1 表示1次
 							infinite 无限次
-					5.animation-delay: 0s;-----动画延时
-					6.animation-direction: normal;------动画的方向 
+					6.animation-delay: 0s;-----动画延时
+					7.animation-direction: normal;------动画的方向 
 							normal 正向 默认值
 							reverse 反向
-							alternate 有来有去
+							alternate 正向有来有去
 							alternate-reverse 反向有来有去
 			*/
-			
+			#demo{
+				width: 300px;
+				height: 40px;
+				background-color: skyblue;
+				margin: 300px auto;
+				animation-name:xuanzhuan;
+				animation-duration: 3s;
+				animation-timing-function:linear;
+				animation-iteration-count:infinite;
+				/* animation-delay:3s; */
+				animation-direction:alternate;
+			}
+			#demo:hover{
+				animation-play-state:paused
+			}
+			@keyframes xuanzhuan{
+				/* from{
+					transform: rotate(0deg);
+				}
+				to{
+					transform: rotate(360deg);
+				} */
+				0%{
+					transform: rotate(0deg);
+				}
+				25%{
+					background-color: red;
+				}
+				50%{
+					opacity: 0.6;
+				}
+				75%{
+					border-radius: 10px;
+					opacity: 0.4;
+				}
+				100%{
+					transform: rotate(360deg);
+				}
+			}
 		</style>
 	</head>
 	<body>
-	
+		<div id="demo">动画</div>
 	</body>
 </html>
