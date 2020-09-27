@@ -10,9 +10,24 @@
 				transform: rotate(角度) 单位是deg,正值是顺时针旋转,负值是逆时针
 				默认是沿着Z轴旋转
 			*/
+			#demo{
+				width: 252px;
+				height: 300px;
+				border: 1px solid black;
+				margin: 200px auto;
+			}
+			img{
+				transition: 1s all linear;
+			}
+			#demo:hover img{
+				transform: rotate(360deg);
+			}
 	</style>
 </head>
 <body>
-	
+	<div id="demo">
+		<img src="../imgs/huge.jpg" alt="">
+		<img src="../imgs/fengche.png" alt="">
+	</div>
 </body>
 </html>

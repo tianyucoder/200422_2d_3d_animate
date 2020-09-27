@@ -10,9 +10,24 @@
 						水平:left/center/right/具体像素值
 						垂直:top/center/bottom/具体像素值
     */
+		#demo{
+				width: 252px;
+				height: 300px;
+				border: 1px solid black;
+				margin: 200px auto;
+			}
+			img{
+				transition: 1s all linear;
+				transform-origin:30px 30px;
+			}
+			#demo:hover img{
+				transform: rotate(90deg);
+			}
   </style>
 </head>
 <body>
-  
+  <div id="demo">
+		<img src="../imgs/huge.jpg" alt="">
+	</div>
 </body>
 </html>

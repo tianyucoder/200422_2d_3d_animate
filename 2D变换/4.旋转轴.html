@@ -8,9 +8,24 @@
 				沿着x轴旋转：从屏幕右侧向左看,正值是顺时针,负值是逆时针,旋转中心点在y轴
 				沿着y轴旋转：从屏幕由底往上看,正值是顺时针,负值是逆时针，旋转中心点在x轴
     */
+			#demo{
+				width: 252px;
+				height: 300px;
+				border: 1px solid black;
+				margin: 200px auto;
+			}
+			img{
+				transition: 1s all linear;
+				transform-origin:right top;
+			}
+			#demo:hover img{
+				transform: rotateY(180deg);
+			}
   </style>
 </head>
 <body>
-
+	<div id="demo">
+		<img src="../imgs/huge.jpg" alt="">
+	</div>
 </body>
 </html>
